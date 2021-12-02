@@ -1,0 +1,17 @@
+
+tasks:
+  - init: pnpm i
+    command: pnpm run dev
+
+
+ports:
+  - port: 3000
+    onOpen: open-browser
+
+image:
+  file: .gitpod/.gitpod.dockerfile
+
+vscode:
+  extensions:
+    - "svelte.svelte-vscode"
+    - "bradlc.vscode-tailwindcss"
