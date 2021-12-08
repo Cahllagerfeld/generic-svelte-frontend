@@ -15,3 +15,14 @@ vscode:
   extensions:
     - "svelte.svelte-vscode"
     - "bradlc.vscode-tailwindcss"
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: false
+    addBadge: true
+    
