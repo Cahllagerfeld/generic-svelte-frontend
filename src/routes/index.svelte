@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Card from '../components/card.svelte';
+</script>
+
+<div class="grid grid-cols-3">
+	<Card>
+		<div slot="card-header" />
+		<div slot="card-body" />
+		<div slot="card-footer" />
+	</Card>
+</div>
