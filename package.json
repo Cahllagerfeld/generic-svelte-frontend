@@ -34,7 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"axios": "^0.24.0",
-		"lodash.get": "^4.4.2"
+		"lodash.get": "^4.4.2",
+		"unfetch": "^4.2.0"
 	}
 }
