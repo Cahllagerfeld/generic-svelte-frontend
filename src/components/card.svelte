@@ -1,14 +1,14 @@
+<script lang="ts">
+	import type { config } from '../interfaces/config.interface';
+	export let config: config.Tile;
+	export let data: any;
+</script>
+
 <div class="card">
 	<div class="card-inner">
-		<div class="card-header">
-			<slot name="card-header" />
-		</div>
-		<div class="card-body">
-			<slot name="card-body" />
-		</div>
-		<div class="card-footer">
-			<slot name="card-footer" />
-		</div>
+		<slot class="card-header" name="card-header" />
+		<slot class="card-body" name="card-body" />
+		<slot class="card-footer" name="card-footer" />
 	</div>
 </div>
 

@@ -10,5 +10,17 @@
 			"url": "https://jsonplaceholder.typicode.com/todos",
 			"method": "GET"
 		}
+	],
+	"tiles": [
+		{
+			"binding": "pokeApi.results",
+			"headline": "Pokemon",
+			"color": "#232123",
+			"lines": [
+				{
+					"binding": "asdf"
+				}
+			]
+		}
 	]
 }
