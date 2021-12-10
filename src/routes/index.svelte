@@ -1,42 +1,25 @@
 <script lang="ts" context="module">
-	export async function load({ page, fetch, session, stuff }) {
-		const url = '/config/index.json';
-		const res = await fetch(url);
+	import { ConfigRequestService } from '../services/config-request.service';
 
-		if (res.ok) {
-			const pageConfig = await res.json();
-			return {
-				props: {
-					pageConfig
-				}
-			};
-		}
+	const configRequestService = new ConfigRequestService();
+
+	export async function load({ page, fetch, session, stuff }) {
+		const data = await configRequestService.getRequests(fetch, '/config/index.json');
+		if (data.error) return data;
 
 		return {
-			status: res.status,
-			error: new Error(`Could not load ${url}`)
+			props: {
+				requestData: data.data
+			}
 		};
 	}
 </script>
 
 <script lang="ts">
-	import type { config } from '../interfaces/config.interface';
-	import { onMount } from 'svelte';
-	export let pageConfig: config.Config;
 	import Card from '../components/card.svelte';
-	import fetch from 'unfetch';
 
-	let requestData = {};
-
-	onMount(async () => {
-		pageConfig.requests.forEach(async (request) => {
-			const res = await fetch(request.url, {
-				method: request.method
-			});
-			const config = await res.json();
-			requestData[request.key] = config;
-		});
-	});
+	export let requestData;
+	console.log(requestData);
 </script>
 
 <div class="grid grid-cols-3">
