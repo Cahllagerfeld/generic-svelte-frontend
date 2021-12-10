@@ -17,7 +17,8 @@ export class ConfigRequestService {
 				const config = await res.json();
 				requestData[request.key] = config;
 			});
-			return { data: requestData };
+			delete pageConfig.requests;
+			return { data: requestData, config: pageConfig };
 		}
 
 		return {

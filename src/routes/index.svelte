@@ -9,7 +9,8 @@
 
 		return {
 			props: {
-				requestData: data.data
+				requestData: data.data,
+				routeConfig: data.config
 			}
 		};
 	}
@@ -17,9 +18,10 @@
 
 <script lang="ts">
 	import Card from '../components/card.svelte';
+	import type { config } from '../interfaces/config.interface';
 
+	export let routeConfig: config.Config;
 	export let requestData;
-	console.log(requestData);
 </script>
 
 <div class="grid grid-cols-3">
