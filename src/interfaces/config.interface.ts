@@ -3,6 +3,7 @@ export module config {
 		key: string;
 		url: string;
 		method: string;
+		parameterBinding?: string;
 	}
 
 	export interface Line {
