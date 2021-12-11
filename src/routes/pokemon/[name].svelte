@@ -25,6 +25,6 @@
 	export let routeConfig: configTypes.Config;
 
 	onMount(() => {
-		routeConfig.requests.forEach(async (request) => {});
+		routeConfig.requests.forEach(async () => {});
 	});
 </script>
