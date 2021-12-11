@@ -41,6 +41,6 @@
 		"unfetch": "^4.2.0"
 	},
 	"lint-staged": {
-		"*.{cjs,js,ts,css,scss,md,svelte}": "prettier --write"
+		"*.{cjs,js,ts,css,scss,md,svelte}": "prettier --write --plugin-search-dir=."
 	  }
 }
