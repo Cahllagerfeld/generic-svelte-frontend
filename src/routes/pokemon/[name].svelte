@@ -21,11 +21,8 @@
 <script lang="ts">
 	import type { config as configTypes } from '../../interfaces/config.interface';
 	import { onMount } from 'svelte';
-	import fetch from 'unfetch';
 
 	export let routeConfig: configTypes.Config;
-
-	console.log(routeConfig);
 
 	onMount(() => {
 		routeConfig.requests.forEach(async (request) => {});
