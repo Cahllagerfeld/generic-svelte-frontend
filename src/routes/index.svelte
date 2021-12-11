@@ -2,7 +2,7 @@
 	import { ConfigRequestService } from '../services/config-request.service';
 	const configRequestService = new ConfigRequestService();
 	export async function load({ page, fetch, session, stuff }) {
-		const data = await configRequestService.getConfig(fetch, '/config/index.json');
+		const data = await configRequestService.getConfig(fetch, '/config/index.json', page.params);
 		if (data.error) return data;
 
 		return {
