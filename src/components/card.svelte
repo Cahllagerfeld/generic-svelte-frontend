@@ -2,14 +2,18 @@
 	import type { config as configTypes } from '../interfaces/config.interface';
 	import get from 'lodash.get';
 	import { goto } from '$app/navigation';
+	import { BindingService } from '../services/binding.service';
 
 	export let link: string = '';
 	export let data: any;
 	export let config: configTypes.Tile;
 
+	const bindingService = new BindingService();
+
 	const triggerRoute = () => {
-		if (!link) return;
-		goto(link);
+		if (!config.link) return;
+		const boundLink = bindingService.getBindingByRegex(config.link, data);
+		goto(boundLink);
 	};
 </script>
 

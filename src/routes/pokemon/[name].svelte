@@ -25,6 +25,8 @@
 
 	export let routeConfig: configTypes.Config;
 
+	console.log(routeConfig);
+
 	onMount(() => {
 		routeConfig.requests.forEach(async (request) => {});
 	});

@@ -28,9 +28,4 @@ export class ConfigRequestService {
 			error: new Error(`Could not load ${url}`)
 		};
 	}
-
-	public getRegexPatternMatches(testString: string) {
-		const regex = new RegExp('%[^%]*%', 'gi');
-		return testString.match(regex);
-	}
 }

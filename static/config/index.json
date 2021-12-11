@@ -13,7 +13,7 @@
 			"headline": "name",
 			"hoverColor": "#ffa3b6",
 			"color": "crimson",
-			"link": "https://pokeapi.co/api/v2/pokemon"
+			"link": "/pokemon/%name%"
 		}
 	]
 }
