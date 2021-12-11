@@ -5,7 +5,22 @@ export module config {
 		method: string;
 	}
 
+	export interface Line {
+		binding: string;
+	}
+
+	export interface Tile {
+		binding: string;
+		headline: string;
+		color: string;
+		link?: string;
+		hoverColor?: string;
+		lines?: Line[];
+	}
+
 	export interface Config {
+		headline: string;
 		requests: Request[];
+		tiles: Tile[];
 	}
 }
