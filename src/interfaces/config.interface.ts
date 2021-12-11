@@ -13,7 +13,7 @@ export module config {
 		binding: string;
 		headline: string;
 		color: string;
-		lines: Line[];
+		lines?: Line[];
 	}
 
 	export interface Config {

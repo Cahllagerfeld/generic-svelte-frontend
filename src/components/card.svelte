@@ -1,20 +1,24 @@
 <script lang="ts">
-	import type { config } from '../interfaces/config.interface';
-	export let config: config.Tile;
+	import type { config as configTypes } from '../interfaces/config.interface';
+	import get from 'lodash.get';
+	import { each } from 'svelte/internal';
+	export let config: configTypes.Tile;
 	export let data: any;
 </script>
 
 <div style={`border-left: 8px solid ${config.color}`} class="card">
 	<div class="card-inner">
 		<div class="card-header">
-			<slot name="card-header" />
+			{get(data, config.headline)}
 		</div>
-		<div class="card-body">
-			<slot name="card-body" />
-		</div>
-		<div class="card-footer">
-			<slot name="card-footer" />
-		</div>
+		{#if config.lines}
+			<div class="card-body">
+				{#each config.lines as line}
+					{get(data, line.binding)}
+				{/each}
+			</div>
+			<div class="card-footer" />
+		{/if}
 	</div>
 </div>
 

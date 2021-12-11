@@ -10,11 +10,12 @@
 	"tiles": [
 		{
 			"binding": "pokeApi.results",
-			"headline": "Pokemon",
-			"color": "#232123",
+			"headline": "name",
+			"hoverColor": "",
+			"color": "crimson",
 			"lines": [
 				{
-					"binding": "asdf"
+					"binding": "url"
 				}
 			]
 		}
