@@ -4,20 +4,30 @@
 	export let data: any;
 </script>
 
-<div class="card">
+<div style={`border-left: 8px solid ${config.color}`} class="card">
 	<div class="card-inner">
-		<slot class="card-header" name="card-header" />
-		<slot class="card-body" name="card-body" />
-		<slot class="card-footer" name="card-footer" />
+		<div class="card-header">
+			<slot name="card-header" />
+		</div>
+		<div class="card-body">
+			<slot name="card-body" />
+		</div>
+		<div class="card-footer">
+			<slot name="card-footer" />
+		</div>
 	</div>
 </div>
 
 <style lang="postcss">
 	.card {
-		@apply py-4 px-8 bg-white shadow-lg rounded-lg flex;
+		@apply py-4 px-8 bg-white shadow-lg rounded-lg flex mb-4;
+	}
+	.card-body {
+		border-top: 1px solid darkgray;
+		@apply mt-2 py-2;
 	}
 	.card-inner {
-		@apply flex flex-col;
+		@apply flex flex-col w-full;
 	}
 	.card-footer {
 		@apply mt-auto;

@@ -33,10 +33,16 @@
 	});
 </script>
 
+<h3>{routeConfig.headline}</h3>
 {#each Object.entries(routeConfig.tiles) as [key, config]}
 	{#each Object.entries(get(requestData, config.binding, {})) as [key, dataset], i}
 		<div class="mb-8">
-			<Card {config} data={dataset} />
+			<Card {config} data={dataset}>
+				<div slot="card-header">Text</div>
+				<div slot="card-body">Body</div>
+			</Card>
 		</div>
 	{/each}
 {/each}
+
+<span class="font-mono">Test</span>

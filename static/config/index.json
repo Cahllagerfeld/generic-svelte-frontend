@@ -1,13 +1,9 @@
 {
+	"headline": "Pokemon",
 	"requests": [
 		{
 			"key": "pokeApi",
 			"url": "https://pokeapi.co/api/v2/pokemon?limit=20",
-			"method": "GET"
-		},
-		{
-			"key": "jsonplaceholder",
-			"url": "https://jsonplaceholder.typicode.com/todos",
 			"method": "GET"
 		}
 	],

@@ -17,6 +17,7 @@ export module config {
 	}
 
 	export interface Config {
+		headline: string;
 		requests: Request[];
 		tiles: Tile[];
 	}
