@@ -11,13 +11,9 @@
 		{
 			"binding": "pokeApi.results",
 			"headline": "name",
-			"hoverColor": "",
+			"hoverColor": "#ffa3b6",
 			"color": "crimson",
-			"lines": [
-				{
-					"binding": "url"
-				}
-			]
+			"link": "https://pokeapi.co/api/v2/pokemon"
 		}
 	]
 }

@@ -13,6 +13,8 @@ export module config {
 		binding: string;
 		headline: string;
 		color: string;
+		link?: string;
+		hoverColor?: string;
 		lines?: Line[];
 	}
 

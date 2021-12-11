@@ -22,7 +22,8 @@
 
 	export let routeConfig: configTypes.Config;
 	let requestData: any = {};
-	onMount(async () => {
+
+	onMount(() => {
 		routeConfig.requests.forEach(async (request) => {
 			const res = await fetch(request.url, {
 				method: request.method
@@ -33,10 +34,12 @@
 	});
 </script>
 
-{#each Object.entries(routeConfig.tiles) as [key, config]}
-	{#each Object.entries(get(requestData, config.binding, {})) as [key, dataset], i}
-		<div class="mb-8">
-			<Card {config} data={dataset} />
-		</div>
+<div class="grid grid-cols-6 gap-4">
+	{#each Object.entries(routeConfig.tiles) as [key, config]}
+		{#each Object.entries(get(requestData, config.binding, {})) as [key, dataset], i}
+			<div class="mb-8">
+				<Card {config} data={dataset} />
+			</div>
+		{/each}
 	{/each}
-{/each}
+</div>

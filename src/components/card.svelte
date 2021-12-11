@@ -1,12 +1,23 @@
 <script lang="ts">
 	import type { config as configTypes } from '../interfaces/config.interface';
 	import get from 'lodash.get';
-	import { each } from 'svelte/internal';
-	export let config: configTypes.Tile;
+	import { goto } from '$app/navigation';
+
+	export let link: string = '';
 	export let data: any;
+	export let config: configTypes.Tile;
+
+	const triggerRoute = () => {
+		if (!link) return;
+		goto(link);
+	};
 </script>
 
-<div style={`border-left: 8px solid ${config.color}`} class="card">
+<div
+	style={`border-left: 8px solid ${config.color}`}
+	class="py-4 px-8  shadow-lg rounded-lg flex mb-4 cursor-pointer"
+	on:click={() => triggerRoute()}
+>
 	<div class="card-inner">
 		<div class="card-header">
 			{get(data, config.headline)}
@@ -23,9 +34,6 @@
 </div>
 
 <style lang="postcss">
-	.card {
-		@apply py-4 px-8 bg-white shadow-lg rounded-lg flex mb-4;
-	}
 	.card-body {
 		border-top: 1px solid darkgray;
 		@apply mt-2 py-2;
