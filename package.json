@@ -22,6 +22,8 @@
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.1.2",
 		"postcss": "^8.3.9",
 		"postcss-load-config": "^3.1.0",
 		"prettier": "^2.4.1",
@@ -37,5 +39,8 @@
 	"dependencies": {
 		"lodash.get": "^4.4.2",
 		"unfetch": "^4.2.0"
-	}
+	},
+	"lint-staged": {
+		"*.{cjs,js,ts,css,scss,md,svelte}": "prettier --write"
+	  }
 }
