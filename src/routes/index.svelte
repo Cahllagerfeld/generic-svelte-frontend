@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	import { ConfigRequestService } from '../services/config-request.service';
 	const configRequestService = new ConfigRequestService();
-	export async function load({ page, fetch, session, stuff }) {
+	export async function load({ page, fetch }) {
 		const data = await configRequestService.getConfig(fetch, '/config/index.json', page.params);
 		if (data.error) return data;
 
