@@ -43,8 +43,7 @@
 	},
 	"lint-staged": {
 		"*.{cjs,js,ts,css,scss,md,svelte}": [
-			"prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
-			"git add"
+			"prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
 		]
 	}
 }
