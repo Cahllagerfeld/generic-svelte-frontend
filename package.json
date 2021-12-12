@@ -42,6 +42,9 @@
 		"unfetch": "^4.2.0"
 	},
 	"lint-staged": {
-		"*.{cjs,js,ts,css,scss,md,svelte}": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+		"*.{cjs,js,ts,css,scss,md,svelte}": [
+			"prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+			"git add"
+		]
 	}
 }
