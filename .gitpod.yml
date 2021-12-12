@@ -1,8 +1,6 @@
-
 tasks:
   - init: pnpm i
     command: pnpm run dev
-
 
 ports:
   - port: 3000
@@ -13,8 +11,8 @@ image:
 
 vscode:
   extensions:
-    - "svelte.svelte-vscode"
-    - "bradlc.vscode-tailwindcss"
+    - 'svelte.svelte-vscode'
+    - 'bradlc.vscode-tailwindcss'
 
 github:
   prebuilds:

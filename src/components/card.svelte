@@ -4,7 +4,6 @@
 	import { goto } from '$app/navigation';
 	import { BindingService } from '../services/binding.service';
 
-	export let link: string = '';
 	export let data: any;
 	export let config: configTypes.Tile;
 
