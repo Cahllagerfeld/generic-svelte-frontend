@@ -35,8 +35,8 @@
 </script>
 
 <div class="grid grid-cols-6 gap-4">
-	{#each Object.entries(routeConfig.tiles) as [key, config]}
-		{#each Object.entries(get(requestData, config.binding, {})) as [key, dataset], i}
+	{#each Object.entries(routeConfig.tiles) as [_, config]}
+		{#each Object.entries(get(requestData, config.binding, {})) as [_, dataset]}
 			<div class="mb-8">
 				<Card {config} data={dataset} />
 			</div>
