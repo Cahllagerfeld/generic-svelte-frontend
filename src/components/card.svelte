@@ -18,7 +18,8 @@
 
 <div
 	style={`border-left: 8px solid ${config.color}`}
-	class="py-4 px-8  shadow-lg rounded-lg flex mb-4 cursor-pointer"
+	class="py-4 px-8  shadow-lg rounded-lg flex mb-4 h-full items-center"
+	class:cursor-pointer={config.link}
 	on:click={() => triggerRoute()}
 >
 	<div class="card-inner">
@@ -28,7 +29,12 @@
 		{#if config.lines}
 			<div class="card-body">
 				{#each config.lines as line}
-					{get(data, line.binding)}
+					<div>
+						{#if line.label}
+							<b>{line.label}: </b>
+						{/if}
+						{get(data, line.binding, '')}
+					</div>
 				{/each}
 			</div>
 			<div class="card-footer" />

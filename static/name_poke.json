@@ -1,0 +1,29 @@
+{
+	"requests": [
+		{
+			"key": "pokeApi",
+			"url": "https://pokeapi.co/api/v2/pokemon/%name%",
+			"method": "GET",
+			"parameterBinding": "name"
+		}
+	],
+	"tiles": [
+		{
+			"binding": "pokeApi",
+			"headline": "name",
+			"hoverColor": "#ffa3b6",
+			"color": "crimson",
+			"isObject": true,
+			"lines": [
+				{
+					"binding": "types[0].type.name",
+					"label": "Type 1"
+				},
+				{
+					"binding": "types[1].type.name",
+					"label": "Type 2"
+				}
+			]
+		}
+	]
+}

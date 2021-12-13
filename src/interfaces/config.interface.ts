@@ -7,6 +7,7 @@ export module config {
 	}
 
 	export interface Line {
+		label?: string;
 		binding: string;
 	}
 
