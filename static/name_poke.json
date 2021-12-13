@@ -16,10 +16,12 @@
 			"isObject": true,
 			"lines": [
 				{
-					"binding": "types[0].type.name"
+					"binding": "types[0].type.name",
+					"label": "Type 1"
 				},
 				{
-					"binding": "types[1].type.name"
+					"binding": "types[1].type.name",
+					"label": "Type 2"
 				}
 			]
 		}

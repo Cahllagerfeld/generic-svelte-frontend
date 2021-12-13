@@ -16,13 +16,16 @@
 			"isObject": true,
 			"lines": [
 				{
-					"binding": "id"
+					"binding": "id",
+					"label": "ID"
 				},
 				{
-					"binding": "title"
+					"binding": "title",
+					"label": "Title"
 				},
 				{
-					"binding": "completed"
+					"binding": "completed",
+					"label": "completed"
 				}
 			]
 		}
