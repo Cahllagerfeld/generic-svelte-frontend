@@ -19,6 +19,7 @@
 	import get from 'lodash.get';
 	import { onMount } from 'svelte';
 	import fetch from 'unfetch';
+	import i18next from '../services/i18next.service';
 
 	export let routeConfig: configTypes.Config;
 	let requestData: any = {};
@@ -30,6 +31,7 @@
 			});
 			const config = await res.json();
 			requestData[request.key] = config;
+			console.log(i18next.t('greeting'));
 		});
 	});
 </script>
