@@ -2,19 +2,19 @@
 	"headline": "Pokemon",
 	"requests": [
 		{
-			"key": "jsonPlaceholder",
-			"url": "https://jsonplaceholder.typicode.com/todos",
+			"key": "pokeApi",
+			"url": "https://pokeapi.co/api/v2/pokemon?limit=20",
 			"method": "GET"
 		}
 	],
 	"tiles": [
 		{
-			"binding": "jsonPlaceholder",
-			"headline": "title",
+			"binding": "pokeApi.results",
+			"headline": "name",
 			"hoverColor": "#ffa3b6",
 			"color": "crimson",
 			"isObject": false,
-			"link": "/%id%"
+			"link": "/%name%"
 		}
 	]
 }
