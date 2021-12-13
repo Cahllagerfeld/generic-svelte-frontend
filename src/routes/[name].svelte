@@ -3,11 +3,7 @@
 	const configRequestService = new ConfigRequestService();
 
 	export async function load({ page, fetch }) {
-		const data = await configRequestService.getConfig(
-			fetch,
-			'/config/pokemon/name.json',
-			page.params
-		);
+		const data = await configRequestService.getConfig(fetch, '/config/name.json', page.params);
 		if (data.error) return data;
 
 		return {
