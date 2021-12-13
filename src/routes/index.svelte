@@ -36,10 +36,14 @@
 
 <div class="grid grid-cols-6 gap-4">
 	{#each Object.entries(routeConfig.tiles) as [_, config]}
-		{#each Object.entries(get(requestData, config.binding, {})) as [_, dataset]}
-			<div class="mb-8">
-				<Card {config} data={dataset} />
-			</div>
-		{/each}
+		{#if !config.isObject}
+			{#each Object.entries(get(requestData, config.binding, {})) as [_, dataset]}
+				<div class="mb-8">
+					<Card {config} data={dataset} />
+				</div>
+			{/each}
+		{:else}
+			<Card {config} data={get(requestData, config.binding, {})} />
+		{/if}
 	{/each}
 </div>

@@ -9,11 +9,11 @@
 	],
 	"tiles": [
 		{
-			"binding": "pokeApi.results",
+			"binding": "pokeApi",
 			"headline": "name",
 			"hoverColor": "#ffa3b6",
 			"color": "crimson",
-			"link": "https://pokeapi.co/api/v2/pokemon"
+			"isObject": true
 		}
 	]
 }

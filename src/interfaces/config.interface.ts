@@ -13,6 +13,7 @@ export module config {
 	export interface Tile {
 		binding: string;
 		headline: string;
+		isObject: boolean;
 		color: string;
 		link?: string;
 		hoverColor?: string;
