@@ -3,7 +3,6 @@
 	import get from 'lodash.get';
 	import { goto } from '$app/navigation';
 	import { BindingService } from '../services/binding.service';
-	import { listen } from 'svelte/internal';
 
 	export let data: any;
 	export let config: configTypes.Tile;
