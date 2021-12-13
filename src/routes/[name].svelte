@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import { ConfigRequestService } from '../../services/config-request.service';
+	import { ConfigRequestService } from '../services/config-request.service';
 	const configRequestService = new ConfigRequestService();
 
 	export async function load({ page, fetch }) {
@@ -19,10 +19,10 @@
 </script>
 
 <script lang="ts">
-	import type { config as configTypes } from '../../interfaces/config.interface';
+	import type { config as configTypes } from '../interfaces/config.interface';
 	import { onMount } from 'svelte';
 	import get from 'lodash.get';
-	import Card from '../../components/card.svelte';
+	import Card from '../components/card.svelte';
 
 	export let routeConfig: configTypes.Config;
 	let requestData: any = {};

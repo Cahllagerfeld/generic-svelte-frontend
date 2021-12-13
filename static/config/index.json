@@ -14,7 +14,7 @@
 			"hoverColor": "#ffa3b6",
 			"color": "crimson",
 			"isObject": false,
-			"link": "/pokemon/%name%"
+			"link": "/%name%"
 		}
 	]
 }
