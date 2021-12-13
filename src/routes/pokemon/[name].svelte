@@ -29,13 +29,11 @@
 
 	onMount(() => {
 		routeConfig.requests.forEach(async (request) => {
-			routeConfig.requests.forEach(async (request) => {
-				const res = await fetch(request.url, {
-					method: request.method
-				});
-				const config = await res.json();
-				requestData[request.key] = config;
+			const res = await fetch(request.url, {
+				method: request.method
 			});
+			const config = await res.json();
+			requestData[request.key] = config;
 		});
 	});
 </script>
