@@ -13,7 +13,18 @@
 			"headline": "title",
 			"hoverColor": "#ffa3b6",
 			"color": "crimson",
-			"isObject": true
+			"isObject": true,
+			"lines": [
+				{
+					"binding": "id"
+				},
+				{
+					"binding": "title"
+				},
+				{
+					"binding": "completed"
+				}
+			]
 		}
 	]
 }

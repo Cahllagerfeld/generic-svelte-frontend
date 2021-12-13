@@ -13,7 +13,15 @@
 			"headline": "name",
 			"hoverColor": "#ffa3b6",
 			"color": "crimson",
-			"isObject": true
+			"isObject": true,
+			"lines": [
+				{
+					"binding": "types[0].type.name"
+				},
+				{
+					"binding": "types[1].type.name"
+				}
+			]
 		}
 	]
 }
