@@ -3,6 +3,7 @@
 	import get from 'lodash.get';
 	import { goto } from '$app/navigation';
 	import { BindingService } from '../services/binding.service';
+	import i18next from '../services/i18next.service';
 
 	export let data: any;
 	export let config: configTypes.Tile;
@@ -31,7 +32,7 @@
 				{#each config.lines as line}
 					<div>
 						{#if line.label}
-							<b>{line.label}: </b>
+							<b>{i18next.t(line.label)}: </b>
 						{/if}
 						{get(data, line.binding, '')}
 					</div>

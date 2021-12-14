@@ -17,11 +17,11 @@
 			"lines": [
 				{
 					"binding": "id",
-					"label": "ID"
+					"label": "id"
 				},
 				{
 					"binding": "title",
-					"label": "Title"
+					"label": "title"
 				},
 				{
 					"binding": "completed",

@@ -1,3 +1,5 @@
 {
-	"greeting": "Hallo"
+	"id": "Identifizierungnummer",
+	"title": "Titel",
+	"completed": "bereits fertiggestellt?"
 }

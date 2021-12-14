@@ -3,7 +3,7 @@ import i18nBackend from 'i18next-http-backend';
 
 class I18NextService {
 	i18next;
-	initLanguage: string = 'en';
+	initLanguage: string = 'de';
 	private static _instance: I18NextService;
 
 	private constructor() {
