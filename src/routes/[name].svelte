@@ -2,13 +2,14 @@
 	import { ConfigRequestService } from '../services/config-request.service';
 	const configRequestService = new ConfigRequestService();
 
-	export async function load({ page, fetch }) {
+	export async function load({ page, fetch, session, stuff }) {
 		const data = await configRequestService.getConfig(fetch, '/config/name.json', page.params);
 		if (data.error) return data;
 
 		return {
 			props: {
-				routeConfig: data.config
+				routeConfig: data.config,
+				i18next: stuff.i18next
 			}
 		};
 	}
@@ -20,6 +21,7 @@
 	import get from 'lodash.get';
 	import Card from '../components/card.svelte';
 
+	export let i18next;
 	export let routeConfig: configTypes.Config;
 	let requestData: any = {};
 
@@ -39,11 +41,11 @@
 		{#if !config.isObject}
 			{#each Object.entries(get(requestData, config.binding, {})) as [_, dataset]}
 				<div class="mb-8">
-					<Card {config} data={dataset} />
+					<Card {i18next} {config} data={dataset} />
 				</div>
 			{/each}
 		{:else}
-			<Card {config} data={get(requestData, config.binding, {})} />
+			<Card {i18next} {config} data={get(requestData, config.binding, {})} />
 		{/if}
 	{/each}
 </div>

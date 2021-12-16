@@ -8,8 +8,6 @@ class I18NextService {
 
 	private constructor() {
 		this.i18next = i18next;
-		this.initialize();
-		this.changeLanguage(this.initLanguage);
 	}
 
 	public t(key: string, replacements?: Record<string, unknown>): string {
@@ -20,8 +18,8 @@ class I18NextService {
 		this.i18next.changeLanguage(language);
 	}
 
-	private initialize() {
-		i18next.use(i18nBackend).init({
+	public async initialize() {
+		await i18next.use(i18nBackend).init({
 			lng: 'en',
 			fallbackLng: 'en',
 			ns: ['common'],
@@ -30,6 +28,7 @@ class I18NextService {
 				loadPath: '/locales/{{lng}}/{{ns}}.json'
 			}
 		});
+		i18next.changeLanguage('de');
 	}
 
 	public static get Instance() {
