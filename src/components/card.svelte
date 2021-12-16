@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 	import { BindingService } from '../services/binding.service';
 
-	export let i18next: any;
+	export let i18next: any = {};
 	export let data: any;
 	export let config: configTypes.Tile;
 

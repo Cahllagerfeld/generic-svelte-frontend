@@ -2,7 +2,7 @@
 	import { ConfigRequestService } from '../services/config-request.service';
 	const configRequestService = new ConfigRequestService();
 
-	export async function load({ page, fetch, session, stuff }) {
+	export async function load({ page, fetch, stuff }) {
 		const data = await configRequestService.getConfig(fetch, '/config/name.json', page.params);
 		if (data.error) return data;
 
@@ -21,7 +21,7 @@
 	import get from 'lodash.get';
 	import Card from '../components/card.svelte';
 
-	export let i18next;
+	export let i18next: any;
 	export let routeConfig: configTypes.Config;
 	let requestData: any = {};
 
