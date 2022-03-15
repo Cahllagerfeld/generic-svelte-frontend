@@ -12,6 +12,7 @@ const config = {
 	],
 
 	kit: {
+		prerender: { enabled: true },
 		adapter: adapter()
 
 		// hydrate the <div id="svelte"> element in src/app.html
